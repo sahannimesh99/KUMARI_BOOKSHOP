@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table table-bordered table-striped">
+        <caption><B>SUPPLIERS LIST</B></caption>
+        <thead>
+        <tr>
+            <th>SUPPLIER ID</th>
+            <th>SUPPLIER NAME</th>
+            <th>PRODUCT NAME</th>
+            <th>NIC</th>
+            <th>ADDRESS</th>
+            <th>CONTACT NUMBER</th>
+            <th>OPERATIONS</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for supplier in suppliers %}
+            <tr>
+                <td>
+                    {{ supplier.id }}
+                </td>
+                <td>
+                    {{ supplier.name }}
+                </td>
+                <td>
+                    {{ supplier.proName }}
+                </td>
+                <td>
+                    {{ supplier.nic }}
+                </td>
+                <td>
+                    {{ supplier.address }}
+                </td>
+                <td>
+                    {{ supplier.contact }}
+                </td>
+                <td>
+                   <button><a href="/suppliers/update?id={{ supplier.id }}">UPDATE</a></button>
+                   <button><a href="/suppliers/delete?id={{ supplier.id }}">DELETE</a></button>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

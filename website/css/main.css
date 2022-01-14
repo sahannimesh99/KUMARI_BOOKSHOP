@@ -1,0 +1,433 @@
+body{
+    margin:0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+.title{
+    color: rgb(128, 128, 128);
+	padding: 20px 0 0 30px;
+	text-align: center;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
+}
+.gotopbtn{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 50px;
+    background-color: #fff;
+    border-radius: 100%;
+}
+.scroll-down {
+    height: 50px;
+    width: 30px;
+    border: 3px solid white;
+    position: absolute;
+    left: 48.5%;
+    bottom: 80px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .scroll-down::before,
+  .scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 3px solid #fff;
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+  }
+  .scroll-down::before {
+    top: 30%;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes scroll-down {
+    0% {
+      /* top:20%; */
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      top: 90%;
+      opacity: 0;
+    }
+  }
+/* Navbar */
+.navbar-brand img{
+    width: 180px;
+    height: 91px;
+    margin-left: 35px;
+}
+.navbar .navbar-nav li a{
+    color: #ffa500 !important; 
+    margin-left: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar button{
+    border-color: #ffa500 !important;
+    border-radius: 100%;
+    margin-right: 5px;
+    padding: 1px;
+}
+.navbar .navbar-nav{
+    margin-left: auto!important;
+}
+.nav-item {
+    color: #83818c;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+    margin: 0 6px;
+    z-index: 1;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    position: relative;
+}
+.nav-item:before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #ffa500;
+    border-radius: 8px 8px 0 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+.nav-item:not(.is-active):hover:before {
+    opacity: 1;
+    bottom: 0;
+}
+.nav-item:not(.is-active):hover {
+    color: #333;
+}
+.nav-indicator {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    transition: 0.4s;
+    height: 5px;
+    z-index: 1;
+    border-radius: 8px 8px 0 0;
+}
+.bg{
+    transition: .8s ease;
+	background-color: rgb(0,0,0,0);
+}
+.bg.scrolled{
+    height: 68px;
+	background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #ffa500;
+}
+
+/* Carsousel */
+.carousel-item {
+    height: 41rem;
+}
+.carousel-item > img {
+    min-width: 100%;
+    height: 41rem;
+    object-fit: cover;
+}
+.carousel-caption {
+	padding-bottom: 180px;
+	font-family: poppins;
+    text-align: center;
+}
+.carousel-caption h2 {
+    padding: 10px 0;
+    text-align: center;
+    width: auto;
+    height: auto;
+	font-size: 42px;
+	font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.carousel-caption h3{
+    padding: 5px 0;
+    text-align: center;
+    width: auto;
+    height: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 23px;
+}
+.carousel-caption a {
+	background: #ffa500;
+	padding: 15px 35px;
+	display: inline-block;
+	margin-top: 15px;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* --------------Service-------------- */
+#service{
+	padding-top: 50px;
+}
+.services{
+	margin: 30px;
+}
+.service-col{
+	display: flex;
+}
+.service-icon img{
+	padding-left: 10px;
+	width: 80px;
+	height: 80px;
+}
+.service-text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	display: inline;
+	padding-left: 10px;
+}
+.services .sec2{
+    margin-top: 20px;
+}
+.menu-image{
+    min-height: 50vh;
+}
+.menu-text{
+    color: #fff;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    background: #ffa500;
+    padding: 40px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.menu-text-center{
+    width: 100%;
+    margin: 0 auto;
+}
+.menu-text p{
+	text-align: end;
+	margin-right: 20px;
+    line-height: 2;
+}
+/* --------------Devices-------------- */
+#devices{
+    background-color: rgba(128, 128, 128, 0.301);
+    padding-top: 50px;
+    padding-bottom: 40px;
+    height:auto;
+}
+.device-card{
+    margin: 15px 15px;
+	width: auto;
+	height: auto;
+    text-align: center;
+}
+.device-icon img{
+	width: 80px;
+	height: 80px;
+	margin: 20px 0;
+}
+.device-text{
+	text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* --------------Contact-------------- */
+.contact{
+    height: 20rem;
+}
+.contact{
+    background-color: #ffa500;
+    text-align: center;
+}
+.contact-title h1{
+    padding-top: 100px;
+    font-size: 50px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contact-title p{
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* --------------Contact us-------------- */
+#contactus{
+    height: auto;
+    background-color: gray;
+}
+.contactUs ul{
+    margin-top: 10px;
+    display: grid;
+}
+.contactUs ul a{
+    margin-top: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    margin-left: 6px;
+}
+.contactUs ul img{
+    width: 50px;
+    height: 50px;
+}
+.contactUs .col-md-1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.contactUs .col-md-4{
+    margin-top: 0px;
+}
+@media screen and (min-width:776px){
+    .menu{
+        display: flex;
+    }
+    .menu-text{
+        flex: 0 0 30%;
+    }
+    .menu-image{
+        flex: 0 0 70%;
+        clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%)
+    }
+    .menu{
+        background: orange;
+    }
+}
+@media(max-width: 776px){
+    .title{
+        color: rgb(128, 128, 128);
+        padding: 20px 5px 0 5px;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
+    }
+    .scroll-down {
+        height: 50px;
+        width: 30px;
+        border: 3px solid white;
+        position: absolute;
+        left: 45%;
+        bottom: 80px;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+    .bg.scrolled{
+        height: 85px;
+        background-color: rgb(255, 255, 255);
+        border-bottom: 1px solid #ffa500;
+    }
+    .carousel-caption {
+        padding-bottom: 180px;
+        font-family: poppins;
+        text-align: center;
+    }
+    .carousel-caption h2 {
+        padding: 0;
+        text-align: center;
+        width: auto;
+        height: auto;
+        font-size: 32px;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .carousel-caption h3{
+        padding: 5px 0;
+        text-align: center;
+        width: auto;
+        height: auto;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+    }
+    .carousel-caption a {
+        background: #ffa500;
+        padding: 15px 35px;
+        display: inline-block;
+        margin-top: 15px;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 25px;
+        text-decoration: none;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #service{
+        padding-top: 70px;
+    }
+    .services .sec2{
+        margin-top: 0px;
+    }
+    #businesses{
+        padding-top: 50px;
+        height: auto;
+    }
+    .business{
+        margin: 5px 0px;
+        width: auto;
+        height: 220px;
+        border-radius: 0%;
+        text-align: center;
+    }
+    .business-titel{
+        position: relative;
+        left: 35px;
+        top: 35px;
+        width: 330px;
+        height: 150px;
+        background-color: rgba(0, 0, 0, 0.473);
+        border-radius: 0%;
+        text-align: center;
+    }
+    .business-titel h4{
+        position: relative;
+        left: 0px;
+        top: 52px;
+        color: #fff;
+        text-align: center;
+        font-size: 22px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Courier, monospace, Tahoma, Geneva, Verdana, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .space{
+        margin: 0px 0px;
+    }
+    .contact{
+        height: 10rem;
+    }
+    .contact-title h1{
+        padding-top: 40px;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .contact-title p{
+        font-size: 15px;
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .contactUs ul a{
+        margin-top: 10px;
+        color: #fff;
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: none;
+        margin-left: 6px;
+    }
+    .contactUs .col-md-4{
+        margin-top: -20px;
+    }
+    .h6{
+        text-align: center;
+    } 
+}

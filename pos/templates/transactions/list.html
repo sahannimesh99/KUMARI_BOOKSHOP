@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table table-bordered table-striped">
+        <caption><B>TRANSACTION SUMMERY REPORT</B></caption>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>PRODUCTS PURCHASED</th>
+            <th>TRANSACTION LOG</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for transaction in transactions %}
+        <tr>
+            <td>
+                {{ transaction.id }}
+            </td>
+            <td>
+                <ul>
+                {% for transaction_product in transaction.transaction_products %}
+                    <li>Item name :{{ transaction_product.product.name }} | Quantity : {{ transaction_product.product_qty }} | Unit Selling Price : Rs.{{ transaction_product.product.selling_price }} | Unit Buying Price : Rs.{{ transaction_product.product.buying_price }}</li>
+                    <li> Profit or Loss : Rs.{{( transaction_product.product.selling_price * transaction_product.product_qty ) - (transaction_product.product.buying_price * transaction_product.product_qty)}}</li>
+                {% endfor %}
+                </ul>
+            </td>
+            <td>
+                {{ transaction.create_on }}
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

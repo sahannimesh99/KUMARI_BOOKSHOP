@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table table-bordered table-striped">
+        <caption><B>PRODUCT LIST</B></caption>
+        <thead>
+        <tr>
+            <th>PRODUCT ID</th>
+            <th>PRODUCT NAME</th>
+            <th>BUYING PRICE</th>
+            <th>SELLING PRICE</th>
+            <th>STOCK QUANTITY</th>
+            <th>OPERATIONS</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for product in products %}
+            <tr>
+                <td>
+                    {{ product.id }}
+                </td>
+                <td>
+                    {{ product.name }}
+                </td>
+                <td>
+                    {{ product.buying_price }}
+                </td>
+                <td>
+                    {{ product.selling_price }}
+                </td>
+                <td>
+                    {{ product.stock }}
+                </td>
+                <td>
+                   <button><a href="/products/update?id={{ product.id }}">UPDATE</a></button>
+                   <button><a href="/products/delete?id={{ product.id }}">DELETE</a></button>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

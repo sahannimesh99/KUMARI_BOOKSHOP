@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table table-bordered table-striped">
+        <caption><B>EMPLOYEE LIST</B></caption>
+        <thead>
+        <tr>
+            <th>EMPLOYEE ID</th>
+            <th>EMPLOYEE NAME</th>
+            <th>NIC NUMBER</th>
+            <th>ADDRESS</th>
+            <th>CONTACT NUMBER</th>
+            <th>OPERATIONS</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for employee in emploees %}
+            <tr>
+                <td>
+                    {{ employee.id }}
+                </td>
+                <td>
+                    {{ employee.name }}
+                </td>
+                <td>
+                    {{ employee.nic }}
+                </td>
+                <td>
+                    {{ employee.address }}
+                </td>
+                <td>
+                    {{ employee.contact }}
+                </td>
+                <td>
+                   <button><a href="/emploees/update?id={{ employee.id }}">UPDATE</a></button>
+                   <button><a href="/emploees/delete?id={{ employee.id }}">DELETE</a></button>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

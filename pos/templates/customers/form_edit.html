@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <form action="" method="post">
+        <div class="form-group">
+            <label for="name">CUSTOMER NAME</label>
+            <input name="name" type="text" class="form-control" id="name" placeholder="customer name" value="{{ customer.name }}">
+        </div>
+        <div class="form-group">
+            <label for="nic">NIC NUMBER</label>
+            <input name="nic" type="text" class="form-control" id="nic" placeholder="nic number" value="{{ customer.nic }}">
+        </div>
+        <div class="form-group">
+            <label for="address">ADDRESS</label>
+            <input name="address" type="text" class="form-control" id="address" placeholder="address" value="{{ customer.address }}">
+        </div>
+        <div class="form-group">
+            <label for="contact">CONTACT NUMBER</label>
+            <input name="contact" type="text" class="form-control" id="contact" placeholder="contact info" value="{{ customer.contact }}">
+        </div>
+        <button type="submit" class="btn btn-default">UPDATE</button>
+    </form>
+{% endblock %}

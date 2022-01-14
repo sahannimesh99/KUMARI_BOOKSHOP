@@ -1,0 +1,36 @@
+<!doctype html>
+<head>
+    <title>KUMARI BOOKSHOP</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">  
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  DETAIL LISTS <b> v </b>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a href="/products">PRODUCT LIST</a></li>
+                    <li><a href="/customers">CUSTOMER LIST</a></li>
+                    <li><a href="/emploees">EMPLOYEES LIST</a></li>
+                    <li><a href="/suppliers">SUPPLIYER LIST</a></li>    
+                </ul>
+            </li>
+            <li><a href="/products/add">ADD PRODUCT</a></li>
+            <li><a href="/customers/add">ADD CUSTOMER</a></li>
+            <li><a href="/emploees/add">ADD EMPLOYEE</a></li>
+            <li><a href="/suppliers/add">ADD SUPPLIER</a></li>
+            <li><a href="/transactions">PAYMENT HISTORY</a></li>
+            <li><a href="/transactions/add">PLACE ORDER</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+</body>

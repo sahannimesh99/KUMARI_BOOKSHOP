@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="" method="post">
+        <div class="form-group">
+            <label for="name">PRODUCT NAME</label>
+            <input name="name" type="text" class="form-control" id="name" placeholder="product name">
+        </div>
+        <div class="form-group">
+            <label for="price">BUYING PRICE</label>
+            <input name="price" type="text" class="form-control" id="price" placeholder="price">
+        </div>
+        <div class="form-group">
+            <label for="sprice">SELLING PRICE</label>
+            <input name="sprice" type="text" class="form-control" id="sprice" placeholder="sprice">
+        </div>
+        <div class="form-group">
+            <label for="stock">STOCK QUANTITY</label>
+            <input name="stock" type="text" class="form-control" id="stock" placeholder="qty">
+        </div>
+        <button type="submit" class="btn btn-default">SAVE</button>
+    </form>
+{% endblock %}

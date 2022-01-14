@@ -1,0 +1,78 @@
+<!-- <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>KUMARI BOOKSHOP</title>
+    <style>
+        html body {
+            user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-user-select: none;
+        }
+    </style>
+</head>
+<body>
+<main class="container">
+    <div class="row">
+        <div class="col-12 my-5 text-center">
+            <h1><b><u>KUMARI BOOKSHOP</u></b></h1>
+        </div>
+        {% if error %}
+            <div class="alert alert-danger d-flex align-items-center" role="alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                     class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img"
+                     aria-label="Warning:">
+                    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                </svg>
+                <div>{{ error }}</div>
+            </div>
+        {% endif %}
+        <div class="col-12 col-sm-6 mb-5 border p-5">
+            <form method="post" action="/login">
+                <div class="mb-3">
+                    <label for="loginUsername" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="loginUsername" aria-describedby="loginUsernameHelp"  name="username">
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="loginPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="loginPassword"  name="password">
+                    <div id="loginUsernameHelp" class="form-text">Trust is here. So don't fear</div>
+                </div>
+                <button type="submit" class="btn btn-success">Login</button>
+            </form>
+        </div>
+        <div class="col-12 col-sm-6 mb-5 border p-5">
+            <form method="post" action="/signup">
+                <div class="mb-3">
+                    <label for="signupUsername" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="signupUsername" name="username" aria-describedby="signupUsernameHelp" >
+                </div>
+                <div class="mb-3">
+                    <label for="signupPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" id="signupPassword">
+                    <div id="loginUsernameHelp" class="form-text">Trust is here. So don't fear</div>
+                </div>
+                <div class="mb-3">
+                    <label for="signupAmount" class="form-label">Amount</label>
+                    <input type="number" class="form-control" name="amount" id="signupAmount" >
+                </div>
+                <button type="submit" class="btn btn-success">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="col-12 text-center text-dark text-uppercase mt-1">
+    <small>© Copyright KUMARI BOOKSHOP Sahan Nimesha</small>
+</div>
+</div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html> -->

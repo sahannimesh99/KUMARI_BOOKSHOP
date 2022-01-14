@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table table-bordered table-striped">
+        <caption><B>CUSTOMERS LIST</B></caption>
+        <thead>
+        <tr>
+            <th>CUSTOMER ID</th>
+            <th>CUSTOMER NAME</th>
+            <th>NIC NUMBER</th>
+            <th>ADDRESS</th>
+            <th>CONTACT NUMBER</th>
+            <th>OPERATIONS</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for customer in customers %}
+            <tr>
+                <td>
+                    {{ customer.id }}
+                </td>
+                <td>
+                    {{ customer.name }}
+                </td>
+                <td>
+                    {{ customer.nic }}
+                </td>
+                <td>
+                    {{ customer.address }}
+                </td>
+                <td>
+                    {{ customer.contact }}
+                </td>
+                <td>
+                   <button><a href="/customers/update?id={{ customer.id }}">UPDATE</a></button>
+                   <button><a href="/customers/delete?id={{ customer.id }}">DELETE</a></button>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
